@@ -1,2 +1,5 @@
 rootProject.name='MVICleanArchitecture'
 include ':app'
+include ':base'
+include ':test-core'
+include ':lib-theme'

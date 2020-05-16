@@ -1,0 +1,11 @@
+apply plugin: 'com.android.feature'
+apply from: '../common.gradle'
+
+
+dependencies {
+    api project(":core")
+    testApi project(":test-core")
+    androidTestApi project(":test-core")
+
+}
+

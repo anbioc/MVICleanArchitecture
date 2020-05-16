@@ -1,0 +1,51 @@
+apply plugin: "com.android.application"
+apply from: "../common.gradle"
+
+android {
+
+    defaultConfig {
+        applicationId "com.alphacoder.projectx"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+    }
+
+    productFlavors {
+        eu {
+            applicationIdSuffix ".eu"
+            versionNameSuffix "-eu"
+        }
+
+        usa {
+            applicationIdSuffix ".usa"
+            versionNameSuffix "-usa"
+        }
+
+//        development {
+//            applicationIdSuffix ".dev"
+//            versionNameSuffix "-dev"
+//        }
+//        play {
+//            applicationIdSuffix ".release"
+//            versionNameSuffix "-release"
+//        }
+
+    }
+
+}
+
+
+dependencies {
+    api project(":core")
+    testApi project(":test-core")
+
+}
