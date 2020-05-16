@@ -1,4 +1,4 @@
-package com.aba.base
+package com.aba.core
 
 import org.junit.Test
 

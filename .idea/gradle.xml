@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/lib-mvi" />
             <option value="$PROJECT_DIR$/lib-theme" />
             <option value="$PROJECT_DIR$/test-core" />
           </set>
