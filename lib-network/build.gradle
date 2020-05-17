@@ -1,8 +1,8 @@
-apply plugin: 'com.android.library'
-apply from: '../common.gradle'
+apply from: '../common_lib.gradle'
 
 dependencies {
 
+    implementation project(":base")
     // OKHttp
     api okhttp_interceptor.interceptor
 

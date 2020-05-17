@@ -1,4 +1,4 @@
-package com.aba.test_core
+package com.aba.test
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
