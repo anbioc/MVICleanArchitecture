@@ -3,6 +3,7 @@ apply from: '../common_lib.gradle'
 dependencies {
     api project(":lib-theme")
     api project(":lib-mvi")
+    api project(":core")
 }
 
 

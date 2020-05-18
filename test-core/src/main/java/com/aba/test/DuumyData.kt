@@ -22,3 +22,5 @@ const val SOME_OTHER_URL = "http://www.tvmaze.com/shows/other/47071/night-force"
 const val SOME_OTHER_SCORE = 11.0
 val SOME_GENRES = listOf("horror", "drama", "comedy")
 val SOME_OTHER_GENRES = listOf("other horror", "other drama", "other comedy")
+
+val SOME_EXCEPTION = Exception()
