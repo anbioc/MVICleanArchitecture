@@ -8,7 +8,7 @@ import com.aba.core.extension.hide
 import com.aba.core.extension.show
 import kotlinx.android.synthetic.main.fragment_error_success.*
 
-abstract class ErrorSuccessFragment: BaseFragment(), ErrorSuccessCallback {
+abstract class ErrorSuccessFragment<State: MviState>: BaseFragment(), ErrorSuccessCallback {
 
     internal companion object {
         internal const val VIEW_INDEX_CONTENT = 0
@@ -30,10 +30,13 @@ abstract class ErrorSuccessFragment: BaseFragment(), ErrorSuccessCallback {
         super.onViewCreated(view, savedInstanceState)
         initView()
         initViewListeners()
+        subscribeToLiveData()
     }
 
+    abstract fun subscribeToLiveData()
     abstract fun initView()
     abstract fun initViewListeners()
+    abstract fun render(state: State)
 
     open fun onErrorAction() {}
     open fun onEmptyAction() {}
