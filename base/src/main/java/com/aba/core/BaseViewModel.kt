@@ -21,7 +21,7 @@ abstract class BaseViewModel<Intent : MviIntent, State : MviState, Result : MviR
         MutableLiveData<State>()
     }
     private val intentSubject: PublishSubject<Intent> by lazy {
-        PublishSubject.create<Intent>()
+        PublishSubject.create()
     }
 
 
@@ -55,10 +55,12 @@ abstract class BaseViewModel<Intent : MviIntent, State : MviState, Result : MviR
         .compose(intentFilter)
         .compose(processor.actionProcessor)
         .scan(startState, reducer)
+        .startWith(startWith())
 
 
+
+    abstract fun startWith(): Observable<State>
     protected open fun filterIntent(intent: Observable<Intent>) = intent
-
     protected abstract fun reduce(initState: State, result: Result): State
 
 }

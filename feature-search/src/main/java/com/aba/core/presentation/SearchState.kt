@@ -9,6 +9,10 @@ data class SearchState(
     val tvItems: List<TvSearchModel>
     ): BaseMviState {
     companion object {
+        fun loading() = SearchState(
+            base = BaseState.loading(),
+            tvItems = emptyList()
+        )
         fun idle() = SearchState(
             base = BaseState.stable(),
             tvItems = emptyList()

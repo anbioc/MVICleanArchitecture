@@ -3,6 +3,7 @@ package com.aba.core.presentation
 import com.aba.core.BaseState
 import com.aba.core.BaseViewModel
 import com.aba.core.MviProcessor
+import io.reactivex.Observable
 import javax.inject.Inject
 
 class SearchViewModel @Inject constructor(
@@ -11,6 +12,8 @@ class SearchViewModel @Inject constructor(
     processor,
     SearchState.idle()
 ) {
+
+
     override fun reduce(initState: SearchState, result: SearchResult): SearchState = when (result) {
         is SearchResult.lastStable -> {
             initState.copy(base = BaseState.stable())
@@ -22,4 +25,7 @@ class SearchViewModel @Inject constructor(
             initState.copy(base = BaseState.withError(result.error))
         }
     }
+
+
+    override fun startWith(): Observable<SearchState> = Observable.just(SearchState.loading())
 }
