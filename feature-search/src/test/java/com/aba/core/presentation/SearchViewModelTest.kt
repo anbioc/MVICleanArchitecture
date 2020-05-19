@@ -6,7 +6,6 @@ import com.aba.core.MviProcessor
 import com.aba.core.util.DataHelper
 import com.aba.domain.model.TvSearchModel
 import com.aba.test.SOME_NAME
-import com.aba.test.any
 import com.aba.test.extension.observeOnce
 import com.nhaarman.mockitokotlin2.given
 import com.nhaarman.mockitokotlin2.mock
@@ -17,8 +16,6 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.InjectMocks
-import org.mockito.Mock
 import org.mockito.MockitoAnnotations.initMocks
 import org.mockito.junit.MockitoJUnitRunner
 
@@ -58,6 +55,9 @@ class SearchViewModelTest {
     }
 
 
+
+
+
     /*
      * Given
      */
@@ -77,6 +77,7 @@ class SearchViewModelTest {
             }
         )
     }
+
 
     /*
      * When
@@ -98,4 +99,5 @@ class SearchViewModelTest {
         assertThat(state.base).isEqualTo(BaseState.showError(SOME_NAME))
         assertThat(state.tvItems).isEqualTo(emptyList<TvSearchModel>())
     }
+
 }
