@@ -1,4 +1,4 @@
-package com.aba.mvicleanarchitecture
+package com.aba.domain
 
 import org.junit.Test
 

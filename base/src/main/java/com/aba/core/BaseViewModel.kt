@@ -17,23 +17,30 @@ abstract class BaseViewModel<Intent : MviIntent, State : MviState, Result : MviR
     private val compositeDisposable: CompositeDisposable by lazy {
         CompositeDisposable()
     }
-    private val _stateLiveData = MutableLiveData<State>()
-    private val intentSubject: PublishSubject<Intent> = PublishSubject.create()
-
-    init {
-        compositeDisposable.add(compose().subscribe {
-            _stateLiveData.postValue(it)
-        })
+    private val _stateLiveData by lazy {
+        MutableLiveData<State>()
     }
+    private val intentSubject: PublishSubject<Intent> by lazy {
+        PublishSubject.create<Intent>()
+    }
+
+
 
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
     }
 
-    override fun states(): LiveData<State> = _stateLiveData
+    override fun states(): LiveData<State> {
+        compositeDisposable.add(compose().subscribe {
+            _stateLiveData.postValue(it)
+        })
+       return  _stateLiveData
+    }
 
-    override fun processIntents(intent: Intent) = intentSubject.onNext(intent)
+    override fun processIntents(intent: Intent) {
+        intentSubject.onNext(intent)
+    }
 
     private val intentFilter = ObservableTransformer<Intent, Intent> { intent ->
         filterIntent(intent)
@@ -53,4 +60,5 @@ abstract class BaseViewModel<Intent : MviIntent, State : MviState, Result : MviR
     protected open fun filterIntent(intent: Observable<Intent>) = intent
 
     protected abstract fun reduce(initState: State, result: Result): State
+
 }

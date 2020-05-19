@@ -45,7 +45,11 @@ android {
 
 
 dependencies {
-    api project(":core")
+    api project(":base")
+    api project(":lib-mvi")
+    api project(":lib-network")
+    api project(":lib-theme")
+    implementation project(":feature-search")
     testApi project(":test-core")
 
 }

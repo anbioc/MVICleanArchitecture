@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/feature-search" />
             <option value="$PROJECT_DIR$/lib-mvi" />
             <option value="$PROJECT_DIR$/lib-network" />
             <option value="$PROJECT_DIR$/lib-theme" />
