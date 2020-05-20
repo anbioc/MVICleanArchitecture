@@ -21,7 +21,7 @@ abstract class BaseViewModel<Intent : MviIntent, State : MviState, Result : MviR
         MutableLiveData<State>()
     }
     private val intentSubject: PublishSubject<Intent> by lazy {
-        PublishSubject.create()
+        PublishSubject.create<Intent>()
     }
 
 

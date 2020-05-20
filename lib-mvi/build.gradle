@@ -1,5 +1,7 @@
-apply from: '../common_lib.gradle'
+apply plugin: 'com.android.library'
+apply from: '../common.gradle'
 
 dependencies {
+    testApi project(":test-core")
 
 }
