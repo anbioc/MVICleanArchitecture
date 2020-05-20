@@ -1,4 +1,3 @@
-# MVICleanArchitecture
 <h2 style="text-align: center;">MVI Clean Architecture ShowCase</h2>
 <p>This is a showcase app to demosntrate the <strong>MVI</strong> architectural pattern and <strong>Clean Architecture</strong> concept.</p>
 <p>I have used <strong>TDD&nbsp;</strong>to add features and changes.</p>
