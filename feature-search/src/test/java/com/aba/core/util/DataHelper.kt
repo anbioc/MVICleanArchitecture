@@ -21,4 +21,6 @@ object DataHelper {
             originalImage = SOME_OTHER_URL
         )
     )
+
+
 }
