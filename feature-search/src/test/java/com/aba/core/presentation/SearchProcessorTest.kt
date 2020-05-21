@@ -32,8 +32,6 @@ class SearchProcessorTest {
     @InjectMocks
     lateinit var subject: SearchProcessor
 
-    @Before
-    fun setup(){}
 
     @Test
     fun `givenSuccessfulResult whenOnAction thenResultIsSuccessful`(){
@@ -65,6 +63,7 @@ class SearchProcessorTest {
         )
     }
 
+
     /*
      * When
      */
@@ -74,13 +73,14 @@ class SearchProcessorTest {
             .test()
     }
 
+
+
     /*
      * Then
      */
-
     private fun thenResultIsSuccessful() = testObserver.assertComplete()
         .assertNoErrors().apply {
-            this.assertValue {
+            assertValue {
                 (it as SearchResult.Result).result == DataHelper.provideTvSearchModelItems()
             }
         }
