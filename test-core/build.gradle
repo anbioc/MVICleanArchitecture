@@ -10,7 +10,6 @@ dependencies {
     implementation powerMock.powermockApiMockito2
     implementation powerMock.powermockJunit4
 
-
 //    implementation (robolectricVersion.robolectric){
 //        exclude group: "org.apache.maven.wagon"
 //        exclude group: "org.apache.maven"

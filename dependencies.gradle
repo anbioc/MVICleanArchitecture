@@ -190,3 +190,9 @@ def motionLayout = "2.0.0-beta6"
 ext.motionLayout = [
         "motionLayout" : "androidx.constraintlayout:constraintlayout:$motionLayout"
 ]
+
+def espressoFragmentRule = "2.0.1"
+ext.espressoFragmentRule = [
+        test : "com.21buttons:fragment-test-rule:$espressoFragmentRule" ,
+        extras : "com.21buttons:fragment-test-rule-extras:$espressoFragmentRule"
+]

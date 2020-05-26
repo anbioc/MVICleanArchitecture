@@ -51,5 +51,6 @@ dependencies {
     api project(":lib-theme")
     implementation project(":feature-search")
     testApi project(":test-core")
+    androidTestApi project(":test-core")
 
 }

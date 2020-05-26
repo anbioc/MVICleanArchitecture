@@ -24,18 +24,18 @@ dependencies {
     testImplementation powerMock.powermockApiMockito2
     testImplementation powerMock.powermockJunit4
     testImplementation assertj.asserjCore
-    testImplementation (assertjAndroid.assertjAndroid){
+    testImplementation(assertjAndroid.assertjAndroid) {
         exclude group: "xmlpull"
     }
 
-    testImplementation (robolectricVersion.robolectric){
+    testImplementation(robolectricVersion.robolectric) {
         exclude group: "org.apache.maven.wagon"
         exclude group: "org.apache.maven"
         exclude group: "xmlpull"
         exclude group: "xpp3"
 
     }
-    testImplementation (roboelctricShadowVersion.shadowsPlayServices){
+    testImplementation(roboelctricShadowVersion.shadowsPlayServices) {
         exclude group: "org.apache.maven.wagon"
         exclude group: "org.apache.maven"
         exclude group: "xmlpull"
@@ -51,7 +51,8 @@ dependencies {
     // Live Data test
     testImplementation liveDataTest.live_data_test
 
+    // Espresso Fragment Test Rule
+    androidTestImplementation espressoFragmentRule.test
+    debugImplementation espressoFragmentRule.extras
 
 }
-
-
