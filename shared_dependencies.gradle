@@ -6,6 +6,8 @@ dependencies {
 
     compileOnly annotation.jsr250
 
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+
 
     // play
     implementation play.play
@@ -74,6 +76,12 @@ dependencies {
 
     // apache utils
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
-    api 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
+    // Motion Layout
+    implementation motionLayout.motionLayout
+
+
+
 
 }
