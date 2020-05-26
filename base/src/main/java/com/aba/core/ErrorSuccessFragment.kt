@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import com.aba.core.extension.hide
 import com.aba.core.extension.show
 import kotlinx.android.synthetic.main.fragment_error_success.*
+import kotlinx.android.synthetic.main.fragment_error_success.view.*
 
 abstract class ErrorSuccessFragment<State: MviState>: BaseFragment(), ErrorSuccessCallback {
 
@@ -19,11 +20,8 @@ abstract class ErrorSuccessFragment<State: MviState>: BaseFragment(), ErrorSucce
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_error_success, container, false).run {
-        errorContentContainer.addView(
-            layoutInflater.inflate(contentResourceId, null)
-        )
-        this
+    ): View? = inflater.inflate(R.layout.fragment_error_success, container, false).apply {
+        this.errorContentContainer.addView(layoutInflater.inflate(contentResourceId, null))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

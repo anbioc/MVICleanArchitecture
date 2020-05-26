@@ -15,11 +15,10 @@ class SearchFragment: ErrorSuccessFragment<SearchState>() {
     }
 
     override fun initView() {
-        TODO("Not yet implemented")
+
     }
 
     override fun initViewListeners() {
-        TODO("Not yet implemented")
     }
 
     override fun subscribeToLiveData() {

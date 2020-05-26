@@ -7,7 +7,7 @@ import io.reactivex.Observable
 import javax.inject.Inject
 
 class SearchViewModel @Inject constructor(
-    processor: MviProcessor<SearchIntent, SearchResult>
+    processor: SearchProcessor
 ) : BaseViewModel<SearchIntent, SearchState, SearchResult>(
     processor,
     SearchState.idle()

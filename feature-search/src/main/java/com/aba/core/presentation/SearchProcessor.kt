@@ -11,11 +11,6 @@ class SearchProcessor @Inject constructor(
     private val searchRepository: SearchRepository
 ) : MviProcessor<SearchIntent, SearchResult> {
     override val actionProcessor = ObservableTransformer<SearchIntent, SearchResult> { action ->
-//        action.publish {
-//            Observable.merge {
-//                action.ofType<SearchIntent.Query>().compose(searchProcessor)
-//            }
-//        }
         action.map {
             it.ofType<SearchIntent.Query>()
         }.compose(searchProcessor)

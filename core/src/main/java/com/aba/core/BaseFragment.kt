@@ -7,8 +7,8 @@ import javax.inject.Inject
 
 abstract class BaseFragment: Fragment() {
 
-    @Inject
-    lateinit var fragmentNavigator: FragmentNavigationHelper
+//    @Inject
+//    lateinit var fragmentNavigator: FragmentNavigationHelper
 
     protected abstract val contentResourceId: Int
 

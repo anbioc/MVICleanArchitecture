@@ -1,16 +1,23 @@
 package com.aba.core.di
 
-import com.aba.core.MviProcessor
-import com.aba.core.presentation.SearchIntent
+
 import com.aba.core.presentation.SearchProcessor
-import com.aba.core.presentation.SearchResult
+import com.aba.core.scope.PerFragment
 import dagger.Binds
 import dagger.Module
 
 
 @Module
 abstract class SearchFragmentModule {
+
     @Binds
+    @PerFragment
     abstract fun provideProcessor(processor: SearchProcessor):
-            MviProcessor<SearchIntent, SearchResult>
+            SearchProcessor
+
+//    @Provides
+//    @PerFragment
+//    fun provideProcessor(searchRepository: SearchRepository):
+//            MviProcessor<SearchIntent, SearchResult> = SearchProcessor(searchRepository)
+
 }

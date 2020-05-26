@@ -1,12 +1,12 @@
 package com.aba.domain.di
 
 import com.aba.domain.mapper.SearchMapper
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-abstract class MapperModule {
+class MapperModule {
 
-    @Binds
-    abstract fun provideSearchMapper(searchMapper: SearchMapper): SearchMapper
+    @Provides
+    fun provideSearchMapper(): SearchMapper = SearchMapper()
 }
