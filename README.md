@@ -1,4 +1,4 @@
-## :guardsman: English Is Fun :guardsman:
+## MVI Clean Architecture: 
 [![Kotlin Version](https://img.shields.io/badge/kotlin-1.3.72-blue.svg)](http://kotlinlang.org/)
 [![codecov](https://codecov.io/gh/jpaya17/englishisfun/branch/master/graph/badge.svg?token=7VESBH4E6N)](https://codecov.io/gh/jpaya17/englishisfun)
 [![Codacy](https://api.codacy.com/project/badge/Grade/c5eaf30c01da4cdeb3807a3bf3d98a70)](https://www.codacy.com/manual/jpaya17/englishisfun?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jpaya17/englishisfun&amp;utm_campaign=Badge_Grade)
@@ -11,21 +11,7 @@ MVI Clean Architecture ShowCase
 This is a showcase app to demosntrate the <strong>MVI</strong> architectural pattern and <strong>Clean Architecture</strong> concept.
 I have used <strong>TDD</strong> to add features and apply changes for this code-base.
 
-
-| ----------------------- |
-| Kotlin                  |
-| MVI                     | 
-| Clean Architecture      | 
-| SOLID                   | 
-| DRY                     |
-| RxJava                  |
-| Room                    | 
-| Dagger                  | 
-| Architectural Components|  
-| Mockito                 |     
-| Espresso                |
-| Retrofit                |
-| ----------------------- |
+Kotlin, MVI, Clean Architecture, SOLID, DRY, RxJava, Room, Dagger, Architectural Components, Mockito, Espresso, Retrofit.
 
 
 ## Author
